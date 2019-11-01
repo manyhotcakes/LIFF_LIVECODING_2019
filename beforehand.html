@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LIFF LIVE CODING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .btn {
+        height: 40px;
+        border: #DDD;
+        box-shadow: 0 4px 4px #BBB;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+      }
+      .img {
+        border-radius: 50%;
+        width: 100px;
+      }
+    </style>
+    <!-- Load LIFF SDK -->
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+  </head>
+  <body>
+    <h1>LIFF LIVE CODING</h1>
+    <div class="flex">
+      <button class="btn" id="showProfile">showProfile</button>
+      <button class="btn" id="sendMessage">sendMessage</button>
+    </div>
+    <div class="flex">
+      <img id="profile_img" class="img" src="">
+      <p id="profile_name"></p>
+    </div>
+  </body>
+  <script>
+    // My LIFF ID
+    const liffId = "1653399672-jWXpkKdz"
+    // Text I want to send
+    const text = "You've successfully sent a message! Hooray!"
+    // Containers displaying profile information
+    const Name = document.querySelector('profile_name');
+    const Img = document.querySelector("profile_img");
+
+    // Callbacks being called after clicking the button
+    function showProfile() {
+    }
+    function sendMessage() {
+    }
+
+    // Declaration to bind buttons and callbacks
+    document.querySelector("#showProfile").addEventListener("click", showProfile)
+    document.querySelector("#sendMessage").addEventListener("click", sendMessage)
+  </script>
+</html>
