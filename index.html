@@ -39,29 +39,17 @@
     // Text I want to send
     const text = "You've successfully sent a message! Hooray!"
     // Containers displaying profile information
-    const Name = document.querySelector('#profile_name');
-    const Img = document.querySelector("#profile_img");
+    const Name = document.querySelector('profile_name');
+    const Img = document.querySelector("profile_img");
 
     // Callbacks being called after clicking the button
     function showProfile() {
-      liff.getProfile().then((profile) => {
-        const {pictureUrl, displayName} = profile
-        Name.textContent = displayName;
-        Img.src = pictureUrl;
-      })
     }
     function sendMessage() {
-      liff.sendMessages([{ type: "text", text }])
     }
 
-    liff.init({ liffId }).then(() => {
-      if (liff.isLoggedIn()) {
-        // Declaration to bind buttons and callbacks
-        document.querySelector("#showProfile").addEventListener("click", showProfile)
-        document.querySelector("#sendMessage").addEventListener("click", sendMessage)
-      } else {
-        liff.login()
-      }
-    })
+    // Declaration to bind buttons and callbacks
+    document.querySelector("#showProfile").addEventListener("click", showProfile)
+    document.querySelector("#sendMessage").addEventListener("click", sendMessage)
   </script>
 </html>
